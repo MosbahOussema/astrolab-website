@@ -1,0 +1,100 @@
+.surface {
+  position: absolute;
+  /* The transparent layout border must not inset the decorative source layer. */
+  inset: -1px;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  pointer-events: none;
+  background: var(--astro-services-bento-base);
+}
+.surface[data-surface='venture'],
+.surface[data-surface='apps'] {
+  background: transparent;
+}
+.surface[data-surface='apps'] {
+  border-radius: 13.05px;
+}
+.shade {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: -92px -93px;
+  aspect-ratio: 1.3703125;
+  backdrop-filter: blur(5px);
+  transform: translateY(0) scale(1) rotate(0deg) skewX(0deg);
+  animation: shadeMirror 4s cubic-bezier(0.07, 0, 0.87, 1) 1s infinite alternate;
+}
+.shade img {
+  display: block;
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.surface[data-surface='venture'] .shade {
+  inset-inline: -33px;
+}
+.surface[data-surface='apps'] .shade {
+  inset-inline: -97px -98px;
+}
+.surface[data-surface='design'] .shade {
+  inset-inline: -116px -118px;
+}
+.surface[data-surface='design'] {
+  border-radius: 16px;
+}
+/* Framer's wrapper maps its "mirror" setting to Motion reverse playback. */
+@keyframes shadeMirror {
+  from {
+    transform: translateY(0) scale(1) rotate(0deg) skewX(0deg);
+  }
+  to {
+    transform: translateY(-70px) scale(1.5) rotate(5deg) skewX(-20deg);
+  }
+}
+@media (min-width: 810px) and (max-width: 1199px) {
+  .surface[data-surface='venture'] .shade {
+    inset-inline: -84px -85px;
+  }
+  .surface[data-surface='automation'],
+  .surface[data-surface='design'] {
+    background: transparent;
+  }
+  .surface[data-surface='automation'] .shade {
+    inset-inline: -139px -142px;
+  }
+  .surface[data-surface='cloud'] .shade {
+    inset-inline: -154px -156px;
+    block-size: 406px;
+    aspect-ratio: auto;
+  }
+  .surface[data-surface='cloud'] {
+    inset-block-start: -28px;
+  }
+  .surface[data-surface='apps'] .shade {
+    inset-inline: -140px;
+  }
+  .surface[data-surface='design'] .shade {
+    inset-inline: -157px -158px;
+  }
+}
+@media (max-width: 809px) {
+  .surface[data-surface='venture'] .shade {
+    inset-inline: -84px -85px;
+  }
+  .surface[data-surface='automation'] {
+    background: transparent;
+  }
+  .surface[data-surface='automation'] .shade {
+    inset-inline: -139px -142px;
+  }
+  .surface[data-surface='apps'] .shade {
+    inset-inline: -140px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shade {
+    animation: none;
+  }
+}

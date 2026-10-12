@@ -1,0 +1,620 @@
+.section {
+  min-block-size: 1205px;
+  padding: 50px;
+  overflow: clip;
+  background: var(--astro-bg);
+}
+.inner {
+  max-inline-size: 1165px;
+  margin-inline: auto;
+}
+.headingReveal {
+  white-space: pre-line;
+}
+.headingReveal h2 {
+  inline-size: 100%;
+  font-weight: var(--astro-services-heading-weight);
+  font-feature-settings: var(--astro-services-heading-features);
+}
+.grid {
+  max-inline-size: 1100px;
+  block-size: 926px;
+  margin: 44px auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-content: center;
+  gap: 19px;
+  column-gap: 24px;
+}
+.card {
+  position: relative;
+  isolation: isolate;
+  grid-column: span 3;
+  block-size: 441px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+}
+.card:nth-child(n + 3) {
+  grid-column: span 2;
+  block-size: 391px;
+}
+.card:nth-child(5) {
+  border-radius: 16px;
+}
+.visual {
+  position: relative;
+  z-index: 2;
+  block-size: 296px;
+  padding: 24px;
+}
+.card:nth-child(n + 3) .visual {
+  block-size: 238px;
+  padding: 12px;
+}
+.copy {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px 24px;
+}
+.cloudFadeFrame {
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  pointer-events: none;
+}
+.cloudFade {
+  position: absolute;
+  z-index: 1;
+  inline-size: 332px;
+  block-size: 205px;
+  inset-inline-start: calc(50.142450142450166% - 332px / 2);
+  inset-block-start: calc(45.01278772378519% - 205px / 2);
+  background: var(--astro-services-illustration-fade);
+  pointer-events: none;
+}
+.card:nth-child(3) .visual {
+  z-index: auto;
+}
+.copy h3 {
+  font: 400 24px/24px var(--astro-font-display);
+  letter-spacing: -0.2px;
+}
+.separator {
+  block-size: 1px;
+  margin-block: 14px 12px;
+  background: linear-gradient(90deg, transparent, var(--astro-border), transparent);
+}
+.copy p {
+  color: var(--astro-faint);
+  font: 400 16px/21.6px var(--astro-font-body);
+  letter-spacing: -0.32px;
+}
+.card:nth-child(n + 3) .copy {
+  padding-inline: 20px;
+  text-align: center;
+}
+.card:nth-child(n + 3) .copy h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
+.card:nth-child(n + 3) .copy p {
+  font-size: 16px;
+  line-height: 23px;
+}
+.card:nth-child(n + 3) .separator {
+  display: none;
+}
+
+.cloudHub {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-end: 11px;
+  translate: -50%;
+  inline-size: 62px;
+  block-size: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 6.453197002410889px;
+  padding-inline: 12.906394004821777px 12px;
+  border-radius: 50%;
+  background: var(--astro-accent);
+  box-shadow: 0 0 8.0665px var(--astro-services-hub-shadow);
+}
+.cloudHub::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.6132992506027222px solid var(--astro-services-hub-border);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.cloudScene {
+  position: relative;
+  block-size: 100%;
+}
+.cloud {
+  block-size: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-block: 14px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--astro-ink) 20%,
+    var(--astro-ink) 80%,
+    transparent
+  );
+}
+.cloudRow {
+  display: flex;
+  inline-size: max-content;
+  gap: 10px;
+  margin-block-end: 10px;
+  animation: cloudLeft 15.68s linear infinite;
+}
+.cloudViewport:nth-child(even) .cloudRow {
+  animation-name: cloudRight;
+}
+.cloudRow span {
+  position: relative;
+  min-inline-size: 88px;
+  padding: 11px 15px;
+  border-radius: 16px;
+  background: var(--astro-services-cloud-chip-surface);
+  color: var(--astro-text);
+  text-align: center;
+  font: 400 11px/15px var(--astro-font-body);
+}
+.cloudRow span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--astro-services-cloud-chip-border);
+  border-radius: inherit;
+  pointer-events: none;
+}
+.cloudHub {
+  inset-block-start: calc(50.602409638554235% - 30px);
+  inset-block-end: auto;
+  translate: -50% 0;
+  inline-size: 60px;
+  block-size: 60px;
+  z-index: 2;
+}
+.cloudBadge {
+  position: relative;
+  flex: none;
+  inline-size: 31px;
+  block-size: 31px;
+}
+.cloudHub img {
+  position: absolute;
+  inset-inline-start: 1px;
+  inset-block-start: 2px;
+  inline-size: 29px;
+  block-size: 28px;
+}
+
+@keyframes cloudLeft {
+  to {
+    transform: translateX(calc(-50% - 5px));
+  }
+}
+@keyframes cloudRight {
+  from {
+    transform: translateX(calc(-50% - 5px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Desktop copy offsets/line boxes measured on each live source card. */
+@media (min-width: 0px) {
+  .cloudScene {
+    inline-size: 310px;
+    block-size: 220px;
+    inset-inline-start: calc((100% - 310px) / 2);
+  }
+  .cloud {
+    padding: 14px 0 0;
+    border-radius: 16px;
+    background: var(--astro-panel-gradient);
+    mask-image: none;
+  }
+  .cloud::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--astro-text-08);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .cloudViewport {
+    position: relative;
+    inline-size: 393px;
+    block-size: 45px;
+    inset-inline-start: 50%;
+    translate: -50%;
+    margin-block-end: 14.6038px;
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      var(--astro-ink) 42.5%,
+      var(--astro-ink) 57.5%,
+      transparent
+    );
+  }
+  .cloudViewport:first-child {
+    inline-size: 310px;
+  }
+  .cloudViewport:nth-child(4) {
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      var(--astro-ink) 12.5%,
+      var(--astro-ink) 87.5%,
+      transparent
+    );
+  }
+  .cloudRow {
+    margin: 0;
+    animation-duration: 14.24s;
+  }
+  .cloudRow span {
+    inline-size: 79px;
+    min-inline-size: 79px;
+    block-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .cloudViewport:nth-child(4) .cloudRow {
+    animation-duration: 14.64s;
+  }
+  .cloudViewport:nth-child(4) .cloudRow span:nth-child(4n + 1) {
+    inline-size: 78px;
+    min-inline-size: 78px;
+  }
+  .cloudViewport:nth-child(4) .cloudRow span:nth-child(4n) {
+    inline-size: 90px;
+    min-inline-size: 90px;
+  }
+  :global([dir='rtl']) .cloudViewport {
+    translate: 50%;
+  }
+}
+/* The source keeps fixed-size artwork inside narrower tablet card windows. */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .section {
+    min-block-size: 0;
+    block-size: 976px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    inline-size: 100%;
+  }
+  .headingReveal > div {
+    max-inline-size: none;
+  }
+  .grid {
+    max-inline-size: 710px;
+    inline-size: 710px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    block-size: 703.25px;
+    grid-template-rows: 322px 369px;
+    align-content: start;
+    align-items: center;
+    column-gap: 15.49px;
+    row-gap: 12.25px;
+  }
+  .card {
+    block-size: 322px;
+  }
+  .card:first-child {
+    inline-size: 347px;
+  }
+  .card:nth-child(2) {
+    inline-size: 347.52px;
+    justify-self: end;
+  }
+  .card:nth-child(3) {
+    block-size: 364px;
+  }
+  .card:nth-child(4) {
+    block-size: 369px;
+  }
+  .card:nth-child(5) {
+    block-size: 363px;
+  }
+  .card:first-child .visual {
+    block-size: 189.66px;
+  }
+  .card:nth-child(2) .visual {
+    block-size: 218.625px;
+  }
+  .card:nth-child(3) .visual {
+    block-size: 234.625px;
+    padding-block-start: 17.625px;
+  }
+  .card:nth-child(3) .cloudScene {
+    inset-block-start: -27px;
+  }
+  .cloudHub {
+    inset-block-start: auto;
+    inset-block-end: 42px;
+  }
+  .cloudFadeFrame {
+    inset-block-start: -28px;
+  }
+  .card:nth-child(4) .visual {
+    block-size: 200.75px;
+  }
+  .card:nth-child(5) .visual {
+    block-size: 207.83px;
+    padding-block-start: 21.83px;
+  }
+  .copy,
+  .card:nth-child(n + 3) .copy {
+    padding-inline: 23px;
+    text-align: center;
+  }
+  .card:nth-child(n + 4) .copy {
+    padding-inline: 14.65625px;
+  }
+  .copy h3,
+  .card:nth-child(n + 3) .copy h3 {
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .copy p,
+  .card:nth-child(n + 3) .copy p {
+    line-height: 21.6px;
+  }
+  .card:nth-child(3) .copy p,
+  .card:nth-child(5) .copy p {
+    font-size: 13px;
+  }
+  .separator,
+  .card:nth-child(n + 3) .separator {
+    display: block;
+    margin-block: 8.795px;
+  }
+  .card:nth-child(4) .copy h3 {
+    font-size: 24px;
+    line-height: 32.658px;
+    letter-spacing: -0.13px;
+  }
+  .card:nth-child(4) .copy p {
+    line-height: 27.0922px;
+    letter-spacing: -0.21px;
+  }
+  .card:nth-child(4) .separator {
+    margin-block: 2px;
+  }
+}
+@media (min-width: 810px) and (max-width: 825px) {
+  .grid {
+    position: relative;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+  :global([dir='rtl']) .grid {
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 1200px) {
+  .section {
+    block-size: 1204.6px;
+    min-block-size: 1204.6px;
+  }
+  .grid {
+    position: relative;
+    inset-inline-start: 50%;
+    inline-size: 1100px;
+    margin-inline: 0;
+    transform: translateX(-50%);
+  }
+  :global([dir='rtl']) .grid {
+    transform: translateX(50%);
+  }
+  .card:first-child .visual {
+    block-size: 324.625px;
+    padding-block: 28.625px 24px;
+  }
+  .card:nth-child(2) .visual {
+    block-size: 318.125px;
+  }
+  .card:nth-child(3) .visual {
+    block-size: 273.625px;
+    padding-block: 29.625px 24px;
+  }
+  .card:nth-child(4) .visual {
+    block-size: 275.03125px;
+  }
+  .card:nth-child(5) .visual {
+    block-size: 281.125px;
+    padding-block: 22.125px 60px;
+  }
+  .copy {
+    padding-inline: 23px;
+  }
+  .card:first-child .copy p {
+    max-inline-size: 441px;
+  }
+  .card:nth-child(n + 3) .copy {
+    padding-inline: 23px;
+  }
+  .card:nth-child(n + 4) .copy {
+    padding-inline: 14.65625px;
+  }
+  .card:nth-child(4) .copy {
+    padding-block-end: 14.65625px;
+  }
+  .card:nth-child(5) .copy {
+    padding-block-end: 22.125px;
+  }
+  .card:nth-child(n + 3) .copy h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .card:nth-child(n + 3) .copy p {
+    line-height: 21.6px;
+  }
+  .separator,
+  .card:nth-child(n + 3) .separator {
+    display: block;
+    margin-block: 8.795px;
+  }
+  .card:nth-child(4) .copy h3 {
+    line-height: 32.658px;
+    letter-spacing: -0.13px;
+  }
+  .card:nth-child(4) .copy p {
+    line-height: 27.0922px;
+    letter-spacing: -0.21px;
+  }
+  .card:nth-child(4) .separator {
+    margin-block: 5.74px;
+  }
+}
+
+@media (max-width: 809px) {
+  .section {
+    min-block-size: auto;
+    padding: 50px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    block-size: auto;
+    gap: 14px;
+    margin-block-start: 42px;
+  }
+  .card,
+  .card:nth-child(n + 3) {
+    grid-column: auto;
+    block-size: 316px;
+  }
+  .card:nth-child(2) {
+    block-size: 350px;
+  }
+  .card:nth-child(n + 3) {
+    block-size: 361px;
+  }
+  .visual,
+  .card:nth-child(n + 3) .visual {
+    block-size: 202px;
+    padding: 12px;
+  }
+  .card:nth-child(2) .visual {
+    block-size: 236px;
+  }
+  .card:nth-child(n + 3) .visual {
+    block-size: 234px;
+  }
+  .copy,
+  .card:nth-child(n + 3) .copy {
+    padding: 0 20px 20px;
+    text-align: start;
+  }
+  .copy h3,
+  .card:nth-child(n + 3) .copy h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .copy p,
+  .card:nth-child(n + 3) .copy p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .card:nth-child(n + 3) .separator {
+    display: block;
+    margin-block: 11px 9px;
+  }
+}
+@media (max-width: 389px) {
+  .section {
+    padding-inline: 20px;
+  }
+}
+/* Shared phone layout; the <=389px title and Venture copy differ below. */
+@media (max-width: 809px) {
+  .headingReveal h2 {
+    font-size: var(--astro-services-heading-mobile-size);
+    line-height: var(--astro-services-heading-mobile-line);
+  }
+  .grid {
+    margin-block-start: 44px;
+    row-gap: 24px;
+    padding-block-end: 15px;
+  }
+  .card:nth-child(3),
+  .card:nth-child(5) {
+    block-size: 391px;
+  }
+  .card:nth-child(3) {
+    margin-block-start: 10px;
+  }
+  .card:first-child .visual {
+    block-size: 183.66px;
+  }
+  .card:nth-child(2) .visual {
+    block-size: 212.83px;
+  }
+  .card:nth-child(3) .visual {
+    block-size: 273.625px;
+    padding-block-start: 29.625px;
+  }
+  .card:nth-child(4) .visual {
+    block-size: 272.16px;
+  }
+  .card:nth-child(5) .visual {
+    block-size: 281.125px;
+    padding-block-start: 22.125px;
+  }
+  .copy,
+  .card:nth-child(n + 3) .copy {
+    padding-inline: 23px;
+    padding-block-end: 23px;
+    text-align: center;
+  }
+  .card:nth-child(n + 4) .copy {
+    padding-inline: 14.65625px;
+    padding-block-end: 14.65625px;
+  }
+  .copy p,
+  .card:nth-child(n + 3) .copy p {
+    font-size: 16px;
+    line-height: 21.6px;
+  }
+  .separator,
+  .card:nth-child(n + 3) .separator {
+    display: block;
+    margin-block: 8.795px;
+  }
+  .card:nth-child(4) .separator {
+    margin-block: 2px;
+  }
+}
+@media (max-width: 389px) {
+  .headingReveal h2 {
+    font-size: var(--astro-services-heading-narrow-size);
+    line-height: var(--astro-services-heading-narrow-line);
+  }
+  .card:first-child .visual {
+    block-size: 159.66px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cloudRow {
+    animation: none;
+  }
+}

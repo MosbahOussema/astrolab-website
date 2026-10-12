@@ -1,0 +1,697 @@
+@media (max-width: 1199.98px) {
+  .page[data-case='talinty-ai-recruitment-platform'] .contentSection {
+    inline-size: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .sectionLabel {
+    margin: 0;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .sectionBody {
+    inline-size: 100%;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .solutions .items {
+    margin-inline-start: 0;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .contentSection {
+    --case-header-gap: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    inline-size: calc(100% - 40px);
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .sectionLabel {
+    margin: 0;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .sectionBody {
+    inline-size: 100%;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks,
+  .page[data-case='mazad-al-jomrok-use-case'] .solutions .items {
+    margin-inline-start: 0;
+  }
+}
+
+@media (min-width: 810px) {
+  .breadcrumb span {
+    white-space: pre;
+  }
+  .page:is([data-case='talinty-ai-recruitment-platform'], [data-case='mazad-al-jomrok-use-case'])
+    .breadcrumb {
+    padding: 10px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .heroImage {
+    inline-size: min(1032px, 100%);
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .page:is([data-case='talinty-ai-recruitment-platform'], [data-case='rawi-al-kotob-use-case'])
+    .heroImage
+    img {
+    block-size: 646px;
+    inset-block: auto;
+    inset-block-start: calc(50% - 322.75px);
+  }
+  .page:is([data-case='talinty-ai-recruitment-platform'], [data-case='mazad-al-jomrok-use-case'])
+    .contentSection {
+    inline-size: calc(100% - 168px);
+    gap: 37px;
+    --case-header-gap: 37px;
+  }
+  .page:is([data-case='talinty-ai-recruitment-platform'], [data-case='mazad-al-jomrok-use-case'])
+    :is(.services, .challenges) {
+    gap: 40px;
+  }
+  .page:is([data-case='talinty-ai-recruitment-platform'], [data-case='mazad-al-jomrok-use-case'])
+    :is(.results, .conclusion) {
+    gap: 24px;
+  }
+  .page[data-editorial='true'] .relatedCard h3 {
+    font-size: 20px;
+  }
+}
+
+.animatedTextVisible .lineWord {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--astro-text-duration) var(--astro-text-easing) var(--astro-line-delay, 0ms),
+    transform var(--astro-text-duration) var(--astro-text-easing) var(--astro-line-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lineWord,
+  .animatedTextVisible .lineWord {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .relatedImage img {
+    transition: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .contentSection,
+  .relatedSection {
+    inline-size: min(100% - 64px, 1024px);
+  }
+
+  .contentSection {
+    gap: 65px;
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .breadcrumb {
+    padding: 0;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .breadcrumb {
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .heroImage img {
+    block-size: 100%;
+    inset-block: 0;
+  }
+  .page:is([data-case='eldowallet-use-case'], [data-case='rawi-al-kotob-use-case'])
+    .contentSection {
+    --case-header-gap: 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+  }
+  .page:is([data-case='eldowallet-use-case'], [data-case='rawi-al-kotob-use-case']) .sectionBody {
+    inline-size: 100%;
+  }
+  .page:is([data-case='eldowallet-use-case'], [data-case='rawi-al-kotob-use-case'])
+    :is(.services, .challenges, .strategy) {
+    gap: 40px;
+  }
+  .page:is([data-case='eldowallet-use-case'], [data-case='rawi-al-kotob-use-case'])
+    :is(.results, .conclusion) {
+    gap: 24px;
+  }
+  .page:is([data-case='eldowallet-use-case'], [data-case='rawi-al-kotob-use-case'])
+    .solutions
+    .items {
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
+  }
+  .desktopFactLabel {
+    display: none;
+  }
+  .mobileFactLabel {
+    display: inline;
+  }
+  .page {
+    padding-block: 195px 110px;
+  }
+
+  .page[data-case='eldowallet-use-case'] {
+    padding-block-end: 55px;
+  }
+
+  .contentSection,
+  .relatedSection {
+    inline-size: min(100% - 32px, 620px);
+  }
+
+  .hero {
+    block-size: 497px;
+    gap: 17px;
+  }
+  .heroHeading {
+    inline-size: 100%;
+    flex: 1 0 0;
+    min-block-size: 0;
+  }
+  .breadcrumb {
+    flex-direction: column;
+    align-items: flex-start;
+    inline-size: 100%;
+    padding: 10px;
+  }
+  .breadcrumb a {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .breadcrumb span {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36.4px;
+    letter-spacing: -0.015em;
+  }
+  .heroImage {
+    flex: none;
+  }
+  .heroImage img {
+    block-size: 184px;
+    inset-block-start: auto;
+    inset-block-end: -1px;
+  }
+  .page[data-case='eldowallet-use-case'] .hero {
+    inline-size: calc(100% - 60px);
+    gap: 25px;
+  }
+  .page[data-case='eldowallet-use-case'] .heroHeading {
+    flex: none;
+    gap: 18px;
+  }
+  .page[data-case='eldowallet-use-case'] .breadcrumb {
+    padding: 0;
+    gap: 5px;
+  }
+  .page[data-case='eldowallet-use-case'] .breadcrumb a {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+
+  .contentSection {
+    display: block;
+    padding-block-start: 92px;
+  }
+
+  .contentSection + .contentSection {
+    margin-block-start: 80px;
+  }
+
+  .sectionLabel {
+    margin-block-end: 33px;
+  }
+
+  .overviewCopy,
+  .sectionIntro,
+  .itemCopy {
+    font-size: 16px;
+  }
+
+  .facts,
+  .services .items,
+  .challenges .items,
+  .results .items,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .services .itemReveal,
+  .challenges .itemReveal,
+  .results .itemReveal,
+  .services .itemReveal:nth-child(even),
+  .challenges .itemReveal:nth-child(even),
+  .results .itemReveal:nth-child(even) {
+    border-inline-start: 0;
+    padding-inline: 0;
+  }
+
+  .relatedSection {
+    margin-block-start: 110px;
+    padding-block-start: 76px;
+  }
+
+  .relatedGrid {
+    gap: 54px;
+  }
+
+  .page[data-case='eldowallet-use-case'] .contentSection {
+    --case-header-gap: 34px;
+    inline-size: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 0;
+  }
+  .page[data-case='eldowallet-use-case'] .sectionBody {
+    inline-size: 100%;
+  }
+  .page[data-case='eldowallet-use-case'] .overview {
+    margin-block-start: 95px;
+  }
+  .page[data-case='eldowallet-use-case'] .sectionLabel {
+    font-size: 16px;
+    margin: 0;
+  }
+  .page[data-case='eldowallet-use-case'] .overviewCopy p:nth-child(2) {
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: -0.02em;
+  }
+  .page[data-case='eldowallet-use-case'] .fact h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='eldowallet-use-case'] .fact p {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='eldowallet-use-case'] .sectionTitle {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  .page[data-case='eldowallet-use-case'] :is(.sectionIntro, .itemCopy) {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='eldowallet-use-case'] .services .itemCopy {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .page[data-case='eldowallet-use-case'] .services .item h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='eldowallet-use-case'] .solutions .item h3 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='eldowallet-use-case'] .solutions .items {
+    margin-inline-start: 0;
+  }
+  .page[data-case='eldowallet-use-case'] .solutions {
+    margin-block-start: 40px;
+    padding-block-start: 64px;
+  }
+  .page[data-case='eldowallet-use-case'] .results {
+    padding-block-start: 22px;
+  }
+  .page[data-case='eldowallet-use-case'] .conclusion {
+    padding-block: 20px;
+  }
+  .page[data-case='eldowallet-use-case'] .results .item h3 {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .page[data-case='eldowallet-use-case'] .results .itemReveal:is(:first-child, :nth-child(3)) {
+    margin-block-end: -10px;
+  }
+  .page[data-case='eldowallet-use-case'] .results .itemReveal:nth-child(5) h3 {
+    font-size: 18px;
+    line-height: 27.8px;
+    margin-block-end: 8px;
+  }
+  .page[data-case='eldowallet-use-case'] .results .itemCopy {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .page[data-case='eldowallet-use-case'] .results .proseItem .itemCopy {
+    line-height: 22.4px;
+  }
+  .page[data-case='eldowallet-use-case'] :is(.results, .conclusion) .sectionLabel {
+    font-size: 16px;
+  }
+  .page[data-case='eldowallet-use-case'] .relatedSection {
+    inline-size: calc(100% - 60px);
+  }
+  .page[data-case='eldowallet-use-case'] .relatedCard h3 {
+    font-size: 16px;
+  }
+  .page[data-case='eldowallet-use-case'] .relatedCard p {
+    font-size: 12px;
+  }
+  .page[data-case='eldowallet-use-case'] .relatedSection > h2 {
+    display: flex;
+    align-items: center;
+    min-block-size: 29px;
+    font-size: 24px;
+    line-height: 26.4px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .contentSection {
+    --case-header-gap: 34px;
+    inline-size: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding-block: 0;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .sectionBody {
+    inline-size: 100%;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .overview {
+    margin-block-start: 95px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .sectionLabel,
+  .page[data-case='rawi-al-kotob-use-case'] :is(.results, .conclusion) .sectionLabel {
+    font-size: 14px;
+    margin: 0;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .overviewCopy p:not(:first-child) {
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: -0.02em;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .fact h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .fact:first-child p {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .sectionTitle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .services .itemCopy {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .challenges .itemReveal:not(:first-child) .itemCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions {
+    padding-block-start: 21px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .items {
+    margin-inline-start: 0;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .sectionIntro,
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:nth-child(-n + 3) .itemCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .item h3 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:nth-child(9) h3,
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:nth-child(12) h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:nth-child(10) h3,
+  .page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:nth-child(11) h3 {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .strategy .itemReveal:nth-child(2) .itemCopy,
+  .page[data-case='rawi-al-kotob-use-case'] .conclusion .sectionIntro {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results {
+    padding-block-start: 22px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results .items {
+    grid-template-columns: 1fr;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results .itemReveal:nth-child(-n + 2) {
+    min-block-size: 0;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results .item h3,
+  .page[data-case='rawi-al-kotob-use-case'] .results .itemReveal:first-child h3 {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results .itemCopy {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .page[data-case='rawi-al-kotob-use-case']
+    .results
+    .itemReveal:is(:first-child, :nth-child(6), :nth-child(8))
+    .itemCopy {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .results .groupHeading h3 {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .conclusion {
+    padding-block: 20px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .relatedSection {
+    inline-size: calc(100% - 40px);
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .relatedSection > h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .relatedCard h3 {
+    font-size: 16px;
+  }
+  .page[data-case='rawi-al-kotob-use-case'] .relatedCard p {
+    font-size: 12px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .overview {
+    margin-block-start: 55px;
+  }
+  /* A-015: the reference's oversized mobile cover obscures its title. */
+  .page[data-case='mazad-al-jomrok-use-case'] .hero {
+    block-size: auto;
+    gap: 30px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .heroHeading {
+    flex: none;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .breadcrumb a {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .sectionLabel,
+  .page[data-case='mazad-al-jomrok-use-case'] .results .sectionLabel {
+    font-size: 14px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .fact h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .fact:first-child p {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .sectionTitle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .services .itemCopy {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks,
+  .page[data-case='mazad-al-jomrok-use-case'] .solutions .itemReveal:first-child .itemCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks > h3 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks :is(ul, ol),
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks li h3,
+  .page[data-case='mazad-al-jomrok-use-case'] .leadBlocks ol li::before {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .results .bulletItems {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .relatedSection {
+    inline-size: calc(100% - 40px);
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .relatedSection > h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .relatedCard h3 {
+    font-size: 16px;
+  }
+  .page[data-case='mazad-al-jomrok-use-case'] .relatedCard p {
+    font-size: 12px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .overview {
+    margin-block-start: 55px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .solutions {
+    margin-block-start: 52px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .breadcrumb span {
+    letter-spacing: -0.02em;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .overviewCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .sectionLabel,
+  .page[data-case='talinty-ai-recruitment-platform'] :is(.results, .conclusion) .sectionLabel {
+    font-size: 14px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .fact h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .fact:first-child p {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .sectionTitle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .services .sectionIntro {
+    inline-size: 282px;
+    max-inline-size: calc(100vw - 88px);
+    margin-inline-start: 24px;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .services .items {
+    inline-size: 330px;
+    max-inline-size: calc(100vw - 40px);
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(1) h3,
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(9) h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemCopy {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(3) .itemCopy,
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(5) .itemCopy,
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(7) .itemCopy,
+  .page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal:nth-child(9) .itemCopy {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .challenges {
+    gap: 24px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform']
+    .challenges
+    .itemReveal:nth-child(3)
+    .itemCopy::after {
+    content: '\a';
+    white-space: pre;
+    block-size: auto;
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .challenges .sectionIntro {
+    font-size: 14px;
+    line-height: 22.4px;
+    margin-block-start: 12px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .challenges .items {
+    margin-block-start: 12px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform']
+    .challenges
+    .itemReveal:not(:nth-child(3))
+    .itemCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .challenges .itemCopy p + p {
+    font-size: 18px;
+    line-height: 28.8px;
+    letter-spacing: -0.02em;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .solutions .sectionIntro,
+  .page[data-case='talinty-ai-recruitment-platform']
+    .solutions
+    .itemReveal:not(:last-child)
+    .itemCopy {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .solutions .item h3,
+  .page[data-case='talinty-ai-recruitment-platform'] .solutions .itemReveal:nth-child(2) h3 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .results .item h3 {
+    font-size: 18px;
+    line-height: 27.8px;
+    margin-block-end: 8px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .results .itemReveal:nth-child(-n + 4) h3 {
+    font-size: 16px;
+    line-height: 32px;
+    margin-block-end: 3px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .results .itemReveal:nth-child(5) .itemCopy,
+  .page[data-case='talinty-ai-recruitment-platform'] .results .itemReveal:nth-child(7) .itemCopy {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .results .groupHeading h3 {
+    font-size: 18px;
+    line-height: 28.8px;
+    margin: 0;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .relatedSection {
+    inline-size: calc(100% - 40px);
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .relatedSection > h2 {
+    display: flex;
+    align-items: center;
+    min-block-size: 29px;
+    font-size: 21px;
+    line-height: 23.1px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .relatedCard h3 {
+    font-size: 16px;
+  }
+  .page[data-case='talinty-ai-recruitment-platform'] .relatedCard p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Recreation"
+  short_description: "Reproduction fidèle avec comparaison visuelle live"
+  default_prompt: "Utilise $website-recreation pour préparer ou réaliser la reproduction fidèle du site de référence dans ce projet, selon le périmètre demandé."

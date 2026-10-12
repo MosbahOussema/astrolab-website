@@ -1,0 +1,19 @@
+:global(html).active:global(.lenis) {
+  height: auto;
+}
+
+:global(html).active:global(.lenis-smooth) {
+  scroll-behavior: auto !important;
+}
+
+:global(html).active:global(.lenis-smooth) :global([data-lenis-prevent]) {
+  overscroll-behavior: contain;
+}
+
+:global(html).active:global(.lenis-stopped) {
+  overflow: hidden;
+}
+
+:global(html).active:global(.lenis-scrolling) iframe {
+  pointer-events: none;
+}

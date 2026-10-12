@@ -1,0 +1,35 @@
+.heading {
+  text-align: center;
+  max-inline-size: 800px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.label {
+  color: var(--astro-accent);
+  font: 400 18px/27px var(--astro-font-body);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.label::before,
+.label::after {
+  content: '';
+  display: block;
+  inline-size: 23px;
+  block-size: 2px;
+  background: linear-gradient(90deg, transparent, var(--astro-faint));
+}
+.label::after {
+  transform: rotate(180deg);
+}
+.heading h2 {
+  font: 400 var(--astro-heading-size)/var(--astro-heading-line) var(--astro-font-display);
+}
+.description {
+  color: var(--astro-muted);
+  max-inline-size: 640px;
+  font: 400 18px/28px var(--astro-font-body);
+}

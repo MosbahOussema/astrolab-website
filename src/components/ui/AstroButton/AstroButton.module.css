@@ -1,0 +1,35 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  min-block-size: 44px;
+  border-radius: 999px;
+  background: var(--astro-text);
+  color: var(--astro-ink) !important;
+  font: 500 14px/24px var(--astro-font-body);
+  white-space: nowrap;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.secondary {
+  color: var(--astro-text) !important;
+  background: var(--astro-surface);
+  border: 1.224px solid var(--astro-border);
+  padding-inline: 11px;
+  backdrop-filter: blur(20px);
+}
+.arrow {
+  display: inline-block;
+  inline-size: 20px;
+  block-size: 20px;
+  flex-shrink: 0;
+}
+:global([dir='rtl']) .arrow {
+  transform: scaleX(-1);
+}

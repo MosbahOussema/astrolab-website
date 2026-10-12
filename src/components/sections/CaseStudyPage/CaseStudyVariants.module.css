@@ -1,0 +1,486 @@
+.page[data-editorial='true'] .contentSection {
+  inline-size: min(1312px, calc(100% - 168px));
+  grid-template-columns: 135px minmax(0, 1fr);
+  gap: 300px;
+  padding-block: 0;
+  margin-block-start: 80px;
+  border: 0;
+}
+.page[data-editorial='true'] .overview {
+  margin-block-start: 135px;
+}
+.page[data-editorial='true'] .sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 400 22px/27px var(--astro-font-body);
+  letter-spacing: -0.54px;
+  text-transform: none;
+  margin: 0;
+  align-self: start;
+  white-space: nowrap;
+}
+.page[data-editorial='true'] .sectionLabel::before,
+.page[data-editorial='true'] .sectionLabel::after {
+  content: '';
+  flex: 0 0 22px;
+  block-size: 19px;
+  background: url('/assets/images/FgRH97CRKc89glFrnVOauFDy3qE.png') center / contain no-repeat;
+}
+.page[data-editorial='true'] .sectionLabel::after {
+  transform: rotate(180deg);
+}
+.page[data-editorial='true'] :is(.overviewCopy, .sectionIntro, .itemCopy, .leadBlocks) {
+  font: 400 18px/28.8px var(--astro-font-body);
+  color: var(--astro-case-copy);
+  letter-spacing: -0.02em;
+  font-feature-settings:
+    'blwf' on,
+    'cv09' on,
+    'cv03' on,
+    'cv04' on,
+    'cv11' on;
+}
+.page[data-editorial='true'] :is(.overviewCopy, .sectionIntro, .itemCopy) p + p {
+  margin-block-start: 12px;
+}
+.page[data-editorial='true'] .facts {
+  grid-template-columns: 1fr;
+  gap: 35px;
+  margin-block-start: 35px;
+}
+.page[data-editorial='true'] .fact {
+  border: 0;
+  padding: 0;
+}
+.page[data-editorial='true'] .fact h2 {
+  font: 600 20px/30px var(--astro-font-body);
+  letter-spacing: -0.015em;
+  margin: 0 0 2px;
+}
+.page[data-editorial='true'] .fact p {
+  font: 400 18px/28.8px var(--astro-font-body);
+  letter-spacing: -0.02em;
+}
+.page[data-editorial='true'] .sectionTitle {
+  font: 400 32px/41.6px var(--astro-font-display);
+  letter-spacing: -0.015em;
+}
+.page[data-editorial='true'] .sectionIntro {
+  margin-block-start: 20px;
+}
+.page[data-editorial='true'] :is(.services, .challenges) .items {
+  grid-template-columns: 1fr;
+  margin-block-start: 35px;
+  gap: 35px;
+}
+.page[data-editorial='true'] .services .itemCopy {
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: -0.015em;
+  color: var(--astro-case-service-copy);
+}
+.page[data-editorial='true'] .itemReveal {
+  border: 0;
+  padding: 0;
+}
+.page[data-editorial='true'] .item {
+  padding: 0;
+}
+.page[data-editorial='true'] .services .item h3 {
+  font: 700 17px/25.5px var(--astro-font-body);
+  letter-spacing: normal;
+  margin: 0 0 10px;
+}
+.page[data-editorial='true'] .challenges .items {
+  margin-block-start: 70px;
+  gap: 10px;
+}
+.page[data-editorial='true'] .challenges .item h3 {
+  font: 400 17px/22.1px var(--astro-font-display);
+  letter-spacing: -0.015em;
+  margin: 0 0 10px;
+}
+.page[data-editorial='true'] .solutions .items {
+  margin-block-start: 80px;
+  gap: 80px;
+  margin-inline-start: -5px;
+}
+.page[data-editorial='true'] .solutions .item h3 {
+  font: 400 24px/31.2px var(--astro-font-display);
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+.page[data-editorial='true'] .itemImage {
+  margin-block-start: 24px;
+}
+.page[data-editorial='true'] .conclusion .sectionIntro {
+  margin-block-start: 0;
+}
+.page[data-editorial='true'] .solutions {
+  padding-block-start: 64px;
+}
+.page[data-editorial='true'] .itemImage {
+  aspect-ratio: 1.561904761904762 / 1;
+  position: relative;
+  border-radius: 20px;
+}
+.page[data-editorial='true'] .itemImage img {
+  position: absolute;
+  inset-inline: 0;
+  block-size: 100%;
+  object-fit: cover;
+  inset-block-start: calc(50% - 100.1470588235294% / 2);
+  inset-block-end: auto;
+}
+.page[data-case='eldowallet-use-case'] .results {
+  padding-block-start: 22px;
+}
+.page[data-case='eldowallet-use-case'] .results .sectionIntro p + p {
+  margin-block-start: 0;
+}
+.page[data-case='eldowallet-use-case'] :is(.results, .conclusion) .sectionLabel {
+  font-size: 18px;
+}
+.page[data-case='eldowallet-use-case'] .results .items {
+  gap: 20px 10px;
+  margin-block-start: 20px;
+  align-items: center;
+}
+.page[data-case='eldowallet-use-case'] .results .itemReveal {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--astro-case-result-surface);
+}
+.page[data-case='eldowallet-use-case'] .results .item h3 {
+  font: 400 18px/48.8px var(--astro-font-display);
+  letter-spacing: normal;
+  margin: 0 0 3px;
+  text-transform: capitalize;
+}
+.page[data-case='eldowallet-use-case'] .results .itemCopy {
+  font: 400 18px/21.6px var(--astro-font-body);
+  letter-spacing: -0.2px;
+  color: var(--astro-case-result-copy);
+}
+.page[data-case='eldowallet-use-case'] .results .itemReveal:nth-child(n + 5) {
+  grid-column: 1 / -1;
+}
+.page[data-case='eldowallet-use-case'] .results .proseItem {
+  padding: 0;
+  background: none;
+}
+.page[data-case='eldowallet-use-case'] .results .proseItem .itemCopy {
+  line-height: 28.8px;
+  letter-spacing: -0.02em;
+  color: var(--astro-case-copy);
+}
+.page[data-case='eldowallet-use-case'] .conclusion {
+  border-block: 1px solid var(--astro-case-divider);
+  padding-block: 20px;
+}
+.page[data-editorial='true'] .relatedSection {
+  inline-size: min(1312px, calc(100% - 168px));
+  margin-block-start: 152px;
+  padding: 0;
+  border: 0;
+}
+.page[data-editorial='true'] .relatedSection > h2 {
+  font: 400 48px/52.8px var(--astro-font-display);
+  letter-spacing: -0.015em;
+  margin: 0 0 42px;
+}
+.page[data-editorial='true'] .relatedGrid {
+  gap: 42px;
+  align-items: start;
+}
+.page[data-editorial='true'] .relatedImage {
+  aspect-ratio: 1.163003663003663 / 1;
+  border-radius: 12px;
+  background: var(--astro-text);
+}
+.page[data-editorial='true'] .relatedCard h3 {
+  font: 400 24px/24px var(--astro-font-display);
+  letter-spacing: -0.2px;
+  margin: 20px 0 10px;
+}
+.page[data-editorial='true'] .relatedCard p {
+  font: 300 16px/25px var(--astro-font-body);
+  color: var(--astro-case-related-copy);
+}
+
+.page[data-case='rawi-al-kotob-use-case'] .services .itemCopy p + p {
+  margin-block-start: 35px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .solutions {
+  padding-block-start: 21px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .challenges .sectionIntro {
+  margin-block-start: 35px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .solutions .items {
+  gap: 24px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:first-child + .itemReveal {
+  margin-block-start: 56px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .solutions .itemReveal:not(:first-child) .itemImage {
+  margin-block-start: 14px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .strategy .items {
+  margin-block-start: 70px;
+  gap: 46px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .strategy .item h3 {
+  font: 400 17px/22.1px var(--astro-font-display);
+  letter-spacing: -0.015em;
+  margin: 0 0 10px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .strategy .itemImage {
+  margin-block-start: 10px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results {
+  padding-block-start: 22px;
+}
+.page[data-case='rawi-al-kotob-use-case'] :is(.results, .conclusion) .sectionLabel {
+  font-size: 18px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .items {
+  gap: 20px 10px;
+  margin-block-start: 20px;
+  align-items: center;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .itemReveal {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--astro-case-result-surface);
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .item h3 {
+  font: 400 18px/29.8px var(--astro-font-display);
+  letter-spacing: normal;
+  margin: 0 0 3px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .itemCopy {
+  font: 400 18px/21.6px var(--astro-font-body);
+  letter-spacing: -0.2px;
+  color: var(--astro-case-result-copy);
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .itemReveal:nth-child(-n + 2) {
+  min-block-size: 265px;
+  display: flex;
+  align-items: center;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .itemReveal:first-child h3 {
+  line-height: 48.8px;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .itemReveal:is(:nth-child(4), :nth-child(7)) {
+  align-self: stretch;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .groupHeading {
+  padding: 0;
+  background: none;
+  grid-column: 1/-1;
+}
+.page[data-case='rawi-al-kotob-use-case'] .results .groupHeading h3 {
+  font: 400 18px/28.8px var(--astro-font-body);
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--astro-case-copy);
+}
+.page[data-case='rawi-al-kotob-use-case'] .conclusion {
+  border-block: 1px solid var(--astro-case-divider);
+  padding-block: 20px;
+}
+
+.page[data-case='mazad-al-jomrok-use-case'] .heroImage {
+  inline-size: min(1032px, 100%);
+  aspect-ratio: 1.561904761904762;
+  border-radius: 20px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .heroImage img {
+  block-size: 100%;
+  object-position: center;
+  inset-block: calc(50% - 100.1470588235294% / 2) auto;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .services .item h3 {
+  font: 400 17px/22.1px var(--astro-font-display);
+  letter-spacing: -0.015em;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .challenges .sectionIntro {
+  margin-block-start: 35px;
+}
+.bulletItems,
+.leadBlocks :is(ul, ol) {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bulletItems {
+  margin-block: 70px 0;
+  gap: 35px;
+  font: 400 17px/22.1px var(--astro-font-display);
+  letter-spacing: -0.015em;
+}
+.bulletItems li,
+.leadBlocks li {
+  position: relative;
+  padding-inline-start: 1.228em;
+}
+.bulletItems li::before,
+.leadBlocks li::before {
+  content: '•';
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--astro-text);
+}
+.leadBlocks ol {
+  counter-reset: case-step;
+}
+.leadBlocks ol li {
+  counter-increment: case-step;
+}
+.leadBlocks ol li::before {
+  content: counter(case-step) ' .';
+  font: 400 24px/31.2px var(--astro-font-display);
+}
+.bulletItems h3 {
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .solutions {
+  padding-block-start: 21px;
+}
+.leadBlocks {
+  margin-block-start: 80px;
+  margin-inline-start: -5px;
+}
+.leadBlocks > * {
+  margin: 0;
+}
+.leadBlocks h3 {
+  font: 400 24px/31.2px var(--astro-font-display);
+  letter-spacing: -0.015em;
+  color: var(--astro-text);
+}
+.leadBlocks > p {
+  margin-block-start: 14px;
+}
+.leadBlocks > p:nth-child(4),
+.leadBlocks > :is(ul, ol) + p {
+  margin-block-start: 24px;
+}
+.leadBlocks :is(ul, ol) {
+  margin-block: 80px 0;
+  gap: 42px;
+  font-size: 24px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .solutions .items {
+  margin-block-start: 24px;
+  gap: 24px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .solutions .itemImage {
+  margin-block-start: 14px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .results {
+  padding-block-start: 22px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .results .sectionLabel {
+  font-size: 18px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .results .bulletItems {
+  margin-block-start: 20px;
+}
+.page[data-case='mazad-al-jomrok-use-case'] .relatedSection {
+  margin-block-start: 254px;
+}
+
+.page[data-case='talinty-ai-recruitment-platform'] .services .sectionIntro {
+  font: 400 16px/20.8px var(--astro-font-body);
+  letter-spacing: -0.015em;
+  color: var(--astro-case-service-copy);
+  margin-block-start: 35px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .services .items {
+  gap: 10px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .services .itemReveal {
+  padding: 24px;
+  background: var(--astro-case-result-surface);
+  border-radius: 12px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .challenges .sectionIntro {
+  margin-block-start: 35px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .challenges .items {
+  margin-block-start: 35px;
+  gap: 22px;
+}
+.page[data-case='talinty-ai-recruitment-platform']
+  .challenges
+  .itemReveal:nth-child(3)
+  .itemCopy::after {
+  content: '';
+  display: block;
+  block-size: 28.8px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .challenges .itemCopy p + p {
+  margin-block-start: 22px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .solutions .groupHeading h3 {
+  margin: 0;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .solutions .groupHeading + .itemReveal {
+  margin-block-start: -47px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .solutions .itemReveal:nth-child(2) h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-block-end: 10px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .solutions .itemCopy p + p {
+  margin-block-start: 10px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results {
+  padding-block-start: 22px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] :is(.results, .conclusion) .sectionLabel {
+  font-size: 18px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .items {
+  grid-template-columns: 1fr;
+  margin-block-start: 20px;
+  gap: 20px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .itemReveal {
+  background: var(--astro-case-result-surface);
+  padding: 24px;
+  border-radius: 16px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .itemReveal:nth-child(2) {
+  margin-block-start: -10px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .item h3 {
+  font: 400 18px/48.8px var(--astro-font-display);
+  letter-spacing: normal;
+  margin: 0 0 3px;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .itemCopy {
+  font: 400 18px/21.6px var(--astro-font-body);
+  letter-spacing: -0.2px;
+  color: var(--astro-case-result-copy);
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .groupHeading {
+  padding: 0;
+  background: none;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .results .groupHeading h3 {
+  font: 400 18px/28.8px var(--astro-font-body);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.page[data-case='talinty-ai-recruitment-platform'] .conclusion {
+  border-block: 1px solid var(--astro-case-divider);
+  padding-block: 20px;
+}

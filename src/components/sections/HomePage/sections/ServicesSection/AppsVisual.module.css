@@ -1,0 +1,779 @@
+.root {
+  position: absolute;
+  inset-block-start: -1px;
+  inset-inline-start: -1px;
+  inline-size: calc(100% + 2px);
+  block-size: 391px;
+  overflow: hidden;
+}
+
+.scene {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  inline-size: 100%;
+  block-size: 398px;
+}
+
+.dashboard,
+.phone,
+.rail,
+.dashboardTitle,
+.metrics,
+.middle,
+.footerBlock,
+.phoneHeader,
+.phoneHero,
+.phoneTiles,
+.phoneFeature,
+.phoneHeaderCompact {
+  transition-duration: 1s;
+  transition-property: opacity, inset-block-start, inset-block-end, inline-size, gap;
+  transition-timing-function: cubic-bezier(0.96, 0.02, 0.08, 1.26);
+}
+
+.dashboard {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 415px;
+  inset-inline-start: calc(46.65427509293683% - 145.49px);
+  inline-size: 291px;
+  block-size: 177px;
+  display: flex;
+  gap: 6.52px;
+  padding: 7.18px 10.26px 6.52px;
+  overflow: visible;
+  border-radius: 10.44px;
+  background: var(--astro-panel-gradient);
+  opacity: 0;
+}
+
+.rail {
+  flex: none;
+  inline-size: 61px;
+  block-size: 100%;
+  padding: 5.87px 6.52px;
+  border-radius: 7.18px;
+  background: var(--astro-services-apps-surface);
+  opacity: 0;
+}
+
+.identity,
+.phoneIdentity,
+.phoneActions {
+  display: flex;
+  align-items: flex-end;
+}
+
+.identity {
+  gap: 1.96px;
+}
+
+.identity > i,
+.phoneIdentity > i,
+.phoneActions > i {
+  display: block;
+  flex: none;
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: 50%;
+}
+
+.identity > i,
+.phoneIdentity > i {
+  background: var(--astro-accent);
+}
+
+.identity > span {
+  display: flex;
+  flex-direction: column;
+  gap: 1.96px;
+}
+
+.identity b,
+.phoneIdentity b,
+.phoneActions i,
+.dashboardBody i,
+.phoneTiles i,
+.phoneTiles b,
+.phoneFeature b,
+.phoneFeature i {
+  display: block;
+  border-radius: 65.24px;
+  background: var(--astro-services-apps-surface);
+}
+
+.identity b:first-child {
+  inline-size: 21px;
+  block-size: 4px;
+}
+
+.identity b:last-child {
+  inline-size: 36px;
+  block-size: 5px;
+}
+
+.dashboardBody {
+  flex: 1 0 0;
+  min-inline-size: 0;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5.22px;
+}
+
+.dashboardTitle {
+  flex: none;
+  inline-size: 200px;
+  block-size: 22px;
+  padding: 3.26px 7.83px;
+  border-radius: 5.87px;
+  background: var(--astro-services-apps-surface);
+  color: var(--astro-services-apps-label);
+  font: 400 7px/15.6579925651px var(--astro-font-display);
+  letter-spacing: -0.13px;
+  opacity: 0;
+}
+
+.metrics,
+.middle,
+.footerBlock {
+  display: flex;
+  inline-size: 100%;
+  opacity: 0;
+}
+
+.metrics {
+  gap: 5.22px;
+}
+
+.metrics i {
+  flex: 1 0 0;
+  block-size: 26px;
+  border-radius: 5.87px;
+}
+
+.middle {
+  gap: 5.22px;
+  block-size: 55px;
+}
+
+.middle i,
+.footerBlock i {
+  flex: 1 0 0;
+  block-size: 100%;
+  border-radius: 5.87px;
+}
+
+.footerBlock {
+  flex: 1 0 0;
+  gap: 3.91px;
+}
+
+.phone {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 415px;
+  inset-inline-end: 21px;
+  inline-size: 114px;
+  block-size: 177px;
+  display: flex;
+  flex-direction: column;
+  gap: 6.52px;
+  padding: 8.48px 10.26px 14.66px;
+  overflow: hidden;
+  border-radius: 10.44px;
+  opacity: 0;
+}
+
+.phoneFrame {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: fill;
+}
+
+.dashboard::after,
+.phone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 0.65px solid var(--astro-services-apps-surface);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.phone::after {
+  border-color: var(--astro-services-apps-phone-border);
+}
+
+.phoneFade {
+  position: absolute;
+  z-index: 1;
+  inset-inline: 0;
+  inset-block-start: 126px;
+  inset-block-end: 0;
+  background: var(--astro-services-apps-phone-fade);
+  pointer-events: none;
+}
+
+.phoneHeader,
+.phoneHeaderCompact {
+  position: relative;
+  flex: none;
+  inline-size: max-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 23.49px;
+  opacity: 0;
+}
+
+.phoneIdentity {
+  align-items: flex-start;
+  gap: 3.26px;
+}
+
+.phoneIdentity > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2.61px;
+  color: var(--astro-services-apps-label);
+  white-space: nowrap;
+  font: 400 5px/15.6579925651px var(--astro-font-display);
+  letter-spacing: -0.13px;
+}
+
+.phoneIdentity b {
+  inline-size: 21px;
+  block-size: 3px;
+}
+
+.phoneActions {
+  gap: 3.26px;
+}
+
+.phoneActions i {
+  background: var(--astro-services-apps-surface);
+}
+
+.phoneHero {
+  position: relative;
+  flex: none;
+  inline-size: 95px;
+  block-size: 34px;
+  border-radius: 5.87px;
+  background: var(--astro-services-apps-surface);
+  opacity: 0;
+}
+
+.phoneTiles {
+  position: relative;
+  flex: none;
+  inline-size: max-content;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2.61px;
+  opacity: 0;
+}
+
+.phoneTiles > span {
+  flex: none;
+  inline-size: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.26px;
+}
+
+.phoneTiles b {
+  inline-size: 36px;
+  block-size: 7px;
+}
+
+.phoneTiles i,
+.phoneTiles span > i {
+  inline-size: 38px;
+  block-size: 34px;
+  border-radius: 5.87px;
+}
+
+.phoneFeature {
+  position: relative;
+  flex: none;
+  inline-size: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3.26px;
+  opacity: 0;
+}
+
+.phoneFeature b {
+  inline-size: 36px;
+  block-size: 7px;
+}
+
+.phoneFeature i {
+  inline-size: 95px;
+  block-size: 34px;
+  border-radius: 5.87px;
+}
+
+.phoneHeaderCompact {
+  gap: 23.49px;
+  opacity: 0;
+}
+
+.phoneGlow {
+  position: absolute;
+  z-index: 1;
+  inset-inline-start: calc(50.8571428571% - 47.955px);
+  inset-block-end: 89px;
+  inline-size: 96px;
+  block-size: 39px;
+  border-radius: 50%;
+  background: var(--astro-services-apps-glow);
+  filter: blur(32px);
+}
+
+.root:not([data-stage='1']) .dashboard,
+.root:not([data-stage='1']) .dashboardTitle,
+.root:not([data-stage='1']) .phone {
+  opacity: 1;
+}
+
+.root:not([data-stage='1']) .dashboard {
+  inset-block-start: 47px;
+}
+
+.root[data-stage='2'] .phone,
+.root[data-stage='3'] .phone,
+.root[data-stage='4'] .phone,
+.root[data-stage='5'] .phone,
+.root[data-stage='6'] .phone,
+.root[data-stage='7'] .phone,
+.root[data-stage='8'] .phone,
+.root[data-stage='9'] .phone {
+  inset-block-start: 102.5988px;
+}
+
+.root[data-stage='3'] .rail,
+.root[data-stage='4'] .rail,
+.root[data-stage='5'] .rail,
+.root[data-stage='6'] .rail,
+.root[data-stage='7'] .rail,
+.root[data-stage='8'] .rail,
+.root[data-stage='9'] .rail,
+.root[data-stage='10'] .rail,
+.root[data-stage='11'] .rail,
+.root[data-stage='12'] .rail,
+.root[data-stage='13'] .rail,
+.root[data-stage='14'] .rail,
+.root[data-stage='5'] .metrics,
+.root[data-stage='6'] .metrics,
+.root[data-stage='7'] .metrics,
+.root[data-stage='8'] .metrics,
+.root[data-stage='9'] .metrics,
+.root[data-stage='10'] .metrics,
+.root[data-stage='11'] .metrics,
+.root[data-stage='12'] .metrics,
+.root[data-stage='13'] .metrics,
+.root[data-stage='14'] .metrics,
+.root[data-stage='6'] .middle,
+.root[data-stage='7'] .middle,
+.root[data-stage='8'] .middle,
+.root[data-stage='9'] .middle,
+.root[data-stage='10'] .middle,
+.root[data-stage='11'] .middle,
+.root[data-stage='12'] .middle,
+.root[data-stage='13'] .middle,
+.root[data-stage='14'] .middle,
+.root[data-stage='7'] .footerBlock,
+.root[data-stage='8'] .footerBlock,
+.root[data-stage='9'] .footerBlock,
+.root[data-stage='10'] .footerBlock,
+.root[data-stage='11'] .footerBlock,
+.root[data-stage='12'] .footerBlock,
+.root[data-stage='13'] .footerBlock,
+.root[data-stage='14'] .footerBlock,
+.root[data-stage='5'] .phoneHeader,
+.root[data-stage='6'] .phoneHeader,
+.root[data-stage='7'] .phoneHeader,
+.root[data-stage='8'] .phoneHeader,
+.root[data-stage='9'] .phoneHeader,
+.root[data-stage='10'] .phoneHeader,
+.root[data-stage='11'] .phoneHeader,
+.root[data-stage='12'] .phoneHeader,
+.root[data-stage='13'] .phoneHeader,
+.root[data-stage='14'] .phoneHeader,
+.root[data-stage='6'] .phoneHero,
+.root[data-stage='7'] .phoneHero,
+.root[data-stage='8'] .phoneHero,
+.root[data-stage='9'] .phoneHero,
+.root[data-stage='12'] .phoneHero,
+.root[data-stage='13'] .phoneHero,
+.root[data-stage='14'] .phoneHero,
+.root[data-stage='8'] .phoneTiles,
+.root[data-stage='9'] .phoneTiles,
+.root[data-stage='13'] .phoneTiles,
+.root[data-stage='14'] .phoneTiles,
+.root[data-stage='14'] .phoneFeature {
+  opacity: 1;
+}
+
+.root[data-stage='10'] .rail {
+  inline-size: 36px;
+}
+
+.root[data-stage='10'] .dashboardTitle,
+.root[data-stage='11'] .dashboardTitle,
+.root[data-stage='12'] .dashboardTitle,
+.root[data-stage='13'] .dashboardTitle,
+.root[data-stage='14'] .dashboardTitle {
+  inline-size: 100%;
+}
+
+.root[data-stage='10'] .phone {
+  inset-block-start: 514px;
+}
+
+.root[data-stage='11'] .rail,
+.root[data-stage='12'] .rail,
+.root[data-stage='13'] .rail,
+.root[data-stage='14'] .rail {
+  inline-size: 92px;
+}
+
+.root[data-stage='11'] .phone,
+.root[data-stage='12'] .phone,
+.root[data-stage='13'] .phone,
+.root[data-stage='14'] .phone {
+  inset-block-start: 76px;
+}
+
+@media (min-width: 1200px) {
+  .root:is(
+      [data-stage='9'],
+      [data-stage='10'],
+      [data-stage='11'],
+      [data-stage='12'],
+      [data-stage='13'],
+      [data-stage='14']
+    )
+    :is(.phoneFeature, .phoneHeaderCompact) {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .root {
+    block-size: 369px;
+  }
+
+  .scene {
+    block-size: 383px;
+  }
+
+  .root[data-stage] .dashboard {
+    inset-block-start: 41px;
+    inset-inline-start: 10px;
+    inline-size: 207px;
+    block-size: 145px;
+    gap: 6.18px;
+    padding: 6.8px 9.72px 6.18px;
+    opacity: 1;
+  }
+
+  .root[data-stage] .rail {
+    inline-size: 58px;
+    padding: 5.56px 6.18px;
+    opacity: 1;
+  }
+
+  .dashboardTitle,
+  .metrics,
+  .middle,
+  .footerBlock,
+  .phone,
+  .phoneHeader,
+  .phoneHero,
+  .phoneTiles,
+  .phoneFeature,
+  .phoneHeaderCompact {
+    opacity: 1;
+  }
+
+  .dashboardBody,
+  .metrics,
+  .middle {
+    gap: 4.95px;
+  }
+
+  .root[data-stage] .dashboardTitle {
+    inline-size: 124px;
+    block-size: 21px;
+    padding: 3.09px 7.42px;
+  }
+
+  .metrics i {
+    block-size: 25px;
+  }
+
+  .middle {
+    block-size: 52px;
+  }
+
+  .root[data-stage] .phone {
+    inset-block-start: 80px;
+    inset-inline-end: 19px;
+    inline-size: 82px;
+    block-size: 145px;
+    gap: 6.18px;
+    padding: 8.04px 9.72px 13.89px;
+  }
+
+  .phoneFade {
+    inset-block-start: 104px;
+  }
+
+  .phoneHeader,
+  .phoneHeaderCompact {
+    gap: 22.26px;
+  }
+
+  .phoneHeader {
+    inline-size: 100%;
+  }
+  .phoneHeader .phoneIdentity,
+  .phoneHeader .phoneIdentity > span {
+    flex: 1 0 0;
+    min-inline-size: 0;
+    inline-size: 1px;
+  }
+  .phoneIdentity,
+  .phoneActions {
+    gap: 3.09px;
+  }
+  .phoneIdentity > span {
+    gap: 2.47px;
+  }
+  .phoneTiles {
+    inline-size: 100%;
+    gap: 2.47px;
+  }
+  .phoneTiles > span {
+    inline-size: 34px;
+    gap: 3.09px;
+  }
+  .phoneTiles b {
+    inline-size: 100%;
+    block-size: 6px;
+  }
+  .phoneTiles > i {
+    flex: 1 0 0;
+    min-inline-size: 0;
+    block-size: 32px;
+  }
+  .phoneFeature {
+    inline-size: 100%;
+    gap: 3.09px;
+  }
+  .phoneFeature b {
+    inline-size: 34px;
+    block-size: 6px;
+  }
+  .phoneFeature i {
+    inline-size: 90px;
+    block-size: 32px;
+  }
+
+  .phoneHero,
+  .phoneTiles span > i {
+    inline-size: 100%;
+    block-size: 32px;
+  }
+
+  .phoneGlow {
+    inset-block-end: 85px;
+    inline-size: 91px;
+    block-size: 37px;
+    filter: blur(30px);
+  }
+}
+
+@media (min-width: 390px) and (max-width: 809px) {
+  .dashboard,
+  .phone {
+    border-radius: 11.94px;
+  }
+  .dashboard::after,
+  .phone::after {
+    border-width: 0.75px;
+  }
+  .root[data-stage] .rail {
+    border-radius: 8.21px;
+  }
+  .dashboardTitle,
+  .dashboardBody i,
+  .phoneHero,
+  .phoneTiles i,
+  .phoneFeature i {
+    border-radius: 6.71px;
+  }
+  .root {
+    block-size: 361px;
+  }
+
+  .root[data-stage] .dashboard {
+    inset-block-start: 33px;
+    inset-inline-start: calc(41.14285714285717% - 125px);
+    inline-size: 250px;
+    block-size: 175px;
+    gap: 6.21px 0.74px;
+    padding: 8.21px 11.74px 7.46px;
+  }
+
+  .root[data-stage] .rail {
+    inline-size: 69px;
+    padding: 6.71px 7.46px;
+  }
+
+  .dashboardBody,
+  .metrics,
+  .middle {
+    gap: 5.98px;
+  }
+
+  .root[data-stage] .dashboardTitle {
+    inline-size: 150px;
+    block-size: 25px;
+    padding: 3.73px 8.96px;
+    font-size: 8px;
+  }
+
+  .metrics i {
+    block-size: 30px;
+  }
+
+  .middle {
+    block-size: 63px;
+  }
+
+  .root[data-stage] .phone {
+    inset-block-start: 80px;
+    inset-inline-end: 20px;
+    inline-size: 99px;
+    block-size: 175px;
+    gap: 6.21px 0.74px;
+    padding: 9.71px 11.74px 16.77px;
+  }
+
+  .phoneFade {
+    inset-block-start: 126px;
+  }
+
+  .phoneHeader,
+  .phoneHeaderCompact {
+    gap: 26.88px;
+  }
+
+  .phoneIdentity,
+  .phoneActions {
+    gap: 3.73px;
+  }
+  .phoneIdentity > i,
+  .phoneActions > i {
+    inline-size: 11px;
+    block-size: 11px;
+  }
+  .phoneIdentity > span {
+    gap: 2.98px;
+    font-size: 6px;
+    line-height: 17.9192px;
+    letter-spacing: -0.14px;
+  }
+  .phoneIdentity b {
+    inline-size: 24px;
+  }
+  .phoneTiles {
+    gap: 2.98px;
+  }
+  .phoneTiles > span {
+    inline-size: 41px;
+    gap: 3.73px;
+  }
+  .phoneTiles b,
+  .phoneFeature b {
+    block-size: 7px;
+  }
+  .phoneTiles > i {
+    block-size: 39px;
+  }
+  .phoneFeature {
+    gap: 3.73px;
+  }
+  .phoneFeature b {
+    inline-size: 41px;
+  }
+  .phoneFeature i {
+    inline-size: 109px;
+    block-size: 39px;
+  }
+
+  .phoneHero,
+  .phoneTiles span > i {
+    block-size: 39px;
+  }
+
+  .phoneGlow {
+    inset-block-end: 102px;
+    inline-size: 110px;
+    block-size: 45px;
+    filter: blur(36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root * {
+    transition: none !important;
+  }
+}
+
+@media (min-width: 1200px) and (prefers-reduced-motion: reduce) {
+  .dashboard,
+  .dashboardTitle,
+  .phone,
+  .rail,
+  .metrics,
+  .middle,
+  .footerBlock,
+  .phoneHeader,
+  .phoneHero,
+  .phoneTiles,
+  .phoneFeature {
+    opacity: 1;
+  }
+
+  .dashboard {
+    inset-block-start: 47px;
+  }
+
+  .dashboardTitle {
+    inline-size: 100%;
+  }
+
+  .rail {
+    inline-size: 92px;
+  }
+
+  .phone {
+    inset-block-start: 76px;
+  }
+
+  .phoneFeature,
+  .phoneHeaderCompact {
+    gap: 100px;
+  }
+}

@@ -1,0 +1,136 @@
+.frame {
+  --automation-forward: 160;
+  --automation-reverse: 30;
+  --automation-opacity: 0;
+  position: absolute;
+  inset-inline: 23px;
+  inset-block-start: 23px;
+  block-size: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--astro-panel-gradient);
+}
+.frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid var(--astro-services-automation-border);
+  border-radius: inherit;
+}
+.logos {
+  position: absolute;
+  inset-inline-start: 50%;
+  translate: -50%;
+  inset-block-start: 17.469999313354492px;
+  inline-size: 452px;
+  max-inline-size: none;
+  block-size: 81px;
+}
+.connections {
+  position: absolute;
+  inset-inline-start: 50%;
+  translate: -50%;
+  inset-block-start: 98.46999931335449px;
+  inline-size: 437px;
+  aspect-ratio: 2.7;
+  padding-inline: 26.11px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.paths {
+  position: relative;
+  inline-size: 100%;
+  aspect-ratio: 2.5;
+  overflow: hidden;
+}
+.paths svg {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: hidden;
+}
+.paths path {
+  fill: transparent;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.base {
+  stroke: var(--astro-services-automation-track);
+}
+.shimmer {
+  stroke: var(--astro-accent);
+  stroke-dasharray: 30 100;
+  stroke-dashoffset: var(--automation-forward);
+  opacity: var(--automation-opacity);
+}
+.shimmer[data-reverse] {
+  stroke-dashoffset: var(--automation-reverse);
+}
+.hub {
+  position: absolute;
+  inset-inline-start: calc(50.6122448979592% - 31.5px);
+  inset-block-end: 7px;
+  inline-size: 63px;
+  block-size: 63px;
+  padding-inline: 13.39px 12.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 103.73px;
+  background: var(--astro-accent);
+  box-shadow: 0 0 6.408820629119873px var(--astro-services-hub-shadow);
+}
+.hub::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.67px solid var(--astro-services-hub-border);
+  border-radius: inherit;
+}
+.hub img {
+  inline-size: 22px;
+  block-size: 22px;
+}
+:global([dir='rtl']) .logos,
+:global([dir='rtl']) .connections {
+  translate: 50%;
+}
+@media (max-width: 1199px) {
+  .frame {
+    block-size: 181px;
+    border-radius: 15.09px;
+  }
+  .frame::after {
+    border-width: 0.94px;
+  }
+  .logos {
+    inset-block-start: 16.48px;
+    inline-size: 326px;
+    block-size: 58px;
+  }
+  .connections {
+    inset-block-start: 74.48px;
+    inline-size: 316px;
+    padding-inline: 18.87px;
+  }
+  .hub {
+    inset-inline-start: calc(50% - 22.5px);
+    inset-block-end: 3px;
+    inline-size: 45px;
+    block-size: 46px;
+    padding-inline: 9.66px 8.99px;
+    border-radius: 74.92px;
+  }
+  .hub::after {
+    border-width: 1.2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    opacity: 0;
+  }
+}

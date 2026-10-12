@@ -1,0 +1,92 @@
+:global(body.astrolab):has(.page) {
+  background: var(--astro-not-found-bg);
+  color: var(--astro-not-found-text);
+}
+
+:global(body.astrolab):has(.page) :global(header),
+:global(body.astrolab):has(.page) :global(footer) {
+  display: none;
+}
+
+.page {
+  display: grid;
+  min-block-size: 100vh;
+  place-items: center;
+  background: var(--astro-not-found-bg);
+  color: var(--astro-not-found-text);
+  font-family: var(--astro-font-not-found);
+  font-feature-settings: 'liga', 'clig';
+  -webkit-font-smoothing: auto;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.content {
+  display: flex;
+  inline-size: 100%;
+  max-inline-size: 240px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  inline-size: 14px;
+  block-size: 21px;
+  margin-block-end: 20px;
+  color: var(--astro-not-found-text);
+}
+
+.title {
+  margin-block: 0 10px;
+  color: var(--astro-not-found-text);
+  font-family: var(--astro-font-not-found);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.description {
+  inline-size: 100%;
+  margin-block: 0 20px;
+  color: var(--astro-not-found-muted);
+  font-family: var(--astro-font-not-found);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 18px;
+  text-wrap: balance;
+}
+
+.action {
+  display: inline-block;
+  block-size: 30px;
+  box-sizing: border-box;
+  padding-inline: 8px;
+  border-radius: 8px;
+  background: var(--astro-not-found-action);
+  color: var(--astro-not-found-action-text);
+  font-family: var(--astro-font-not-found);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  transition: none;
+}
+
+.action:hover {
+  opacity: 0.75;
+  transition: all 0.2s;
+}
+
+.action:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 1px;
+}

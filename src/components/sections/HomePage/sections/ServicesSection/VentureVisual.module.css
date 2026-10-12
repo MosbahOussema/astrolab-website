@@ -1,0 +1,311 @@
+.root {
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+}
+
+.workspace {
+  position: relative;
+  inline-size: 490px;
+  inset-inline-start: 50%;
+  translate: -50%;
+  block-size: 272px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.92, 0.03, 0.13, 1.11);
+}
+
+.codePanel,
+.roadmapPanel {
+  position: relative;
+  block-size: 272px;
+  overflow: hidden;
+  border: 1px solid var(--astro-services-venture-border);
+  border-radius: 16px;
+  background: var(--astro-panel-gradient);
+}
+
+.codePanel {
+  flex: 0 0 223.28125px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14.6038px;
+  padding-block-end: 22.4674px;
+}
+
+.codeViewport {
+  position: relative;
+  flex: none;
+  overflow: hidden;
+  inline-size: 100%;
+  block-size: 412px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10.09px;
+  padding: 15.8208px;
+}
+
+.lineNumbers {
+  inline-size: 13px;
+  block-size: 380px;
+  flex: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--astro-services-venture-line-text);
+  font: 700 10.55px/12.66px var(--astro-font-venture-lines);
+}
+
+.codeStack {
+  inline-size: 165px;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  color: var(--astro-text-80);
+  font: 500 10.55px/12.66px var(--astro-font-venture-code);
+}
+
+.codeGroup {
+  inline-size: 165px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skeleton {
+  inline-size: 46px;
+  block-size: 9px;
+  display: block;
+  flex: none;
+  border-radius: 100px;
+  background: var(--astro-surface-raised);
+}
+
+.codeGroup p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.codeGroup em {
+  color: var(--astro-accent);
+  font-style: normal;
+}
+
+.codeGroup b {
+  color: var(--astro-services-venture-code-key);
+  font-weight: 500;
+}
+
+.codeLead,
+.codeCollection,
+.codeSchema,
+.codeTail,
+.codeRestart,
+.roadmapPanel > strong,
+.roadmapGroup {
+  flex: none;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.92, 0.03, 0.13, 1.11);
+}
+
+.roadmapPanel {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 17.6px;
+  padding: 19.47px 15.7272px 22.4674px;
+}
+
+.roadmapPanel > strong {
+  flex: none;
+  color: var(--astro-text-80);
+  font: 400 13px/24px var(--astro-font-display);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+.roadmapGroup {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.roadmapGroup i {
+  inline-size: 100%;
+  block-size: 9px;
+  display: block;
+  flex: none;
+  border-radius: 100px;
+  background: var(--astro-surface-raised);
+}
+
+.roadmapGroup i:last-child {
+  inline-size: 146px;
+}
+
+.panelFade {
+  position: relative;
+  inline-size: 220px;
+  block-size: 289px;
+  flex: none;
+  background: var(--astro-services-venture-fade);
+}
+
+.root[data-stage='2'] .workspace,
+.root[data-stage='3'] .workspace,
+.root[data-stage='4'] .workspace,
+.root[data-stage='5'] .workspace,
+.root[data-stage='6'] .workspace,
+.root[data-stage='7'] .workspace,
+.root[data-stage='2'] .roadmapPanel > strong,
+.root[data-stage='3'] .roadmapPanel > strong,
+.root[data-stage='4'] .roadmapPanel > strong,
+.root[data-stage='5'] .roadmapPanel > strong,
+.root[data-stage='6'] .roadmapPanel > strong,
+.root[data-stage='7'] .roadmapPanel > strong,
+.root[data-stage='3'] .codeLead,
+.root[data-stage='4'] .codeLead,
+.root[data-stage='5'] .codeLead,
+.root[data-stage='6'] .codeLead,
+.root[data-stage='7'] .codeLead,
+.root[data-stage='4'] .codeCollection,
+.root[data-stage='5'] .codeCollection,
+.root[data-stage='6'] .codeCollection,
+.root[data-stage='7'] .codeCollection,
+.root[data-stage='5'] .codeSchema,
+.root[data-stage='6'] .codeSchema,
+.root[data-stage='7'] .codeSchema,
+.root[data-stage='6'] .codeTail,
+.root[data-stage='7'] .codeTail,
+.root[data-stage='7'] .codeRestart,
+.root[data-stage='3'] .roadmapOne,
+.root[data-stage='4'] .roadmapOne,
+.root[data-stage='5'] .roadmapOne,
+.root[data-stage='6'] .roadmapOne,
+.root[data-stage='7'] .roadmapOne,
+.root[data-stage='4'] .roadmapTwo,
+.root[data-stage='5'] .roadmapTwo,
+.root[data-stage='6'] .roadmapTwo,
+.root[data-stage='7'] .roadmapTwo,
+.root[data-stage='5'] .roadmapThree,
+.root[data-stage='6'] .roadmapThree,
+.root[data-stage='7'] .roadmapThree {
+  opacity: 1;
+}
+
+@media (max-width: 809px) {
+  .root {
+    block-size: 181px;
+  }
+
+  .workspace {
+    inline-size: 310px;
+    block-size: 181px;
+    gap: 7.98px;
+  }
+
+  .codePanel,
+  .roadmapPanel {
+    block-size: 181px;
+    border-width: 0.67px;
+    border-radius: 10.64px;
+  }
+
+  .codePanel {
+    flex-basis: 140.5625px;
+    gap: 9.71px;
+    padding-block-end: 14.95px;
+  }
+
+  .codeViewport {
+    block-size: 274px;
+    gap: 6.71px;
+    padding: 10.52px;
+  }
+
+  .lineNumbers {
+    inline-size: 9px;
+    block-size: 253px;
+    font-size: 7px;
+    line-height: 8.4px;
+  }
+
+  .codeStack {
+    inline-size: 110px;
+    gap: 5.99px;
+    font-size: 7px;
+    line-height: 8.4px;
+  }
+
+  .codeGroup {
+    inline-size: 110px;
+    gap: 1.33px;
+  }
+
+  .skeleton {
+    inline-size: 31px;
+    block-size: 6px;
+    border-radius: 66.52px;
+  }
+
+  .roadmapPanel {
+    gap: 11.71px;
+    padding: 12.95px 10.46px 14.95px;
+  }
+
+  .roadmapPanel > strong {
+    font-size: 9px;
+    line-height: 15.9657px;
+    letter-spacing: -0.13px;
+  }
+
+  .roadmapGroup {
+    gap: 4.66px;
+  }
+
+  .roadmapGroup i {
+    block-size: 6px;
+    border-radius: 66.52px;
+  }
+
+  .roadmapGroup i:last-child {
+    inline-size: 97px;
+  }
+
+  .panelFade {
+    inline-size: 146px;
+    block-size: 192px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 809px) {
+  .workspace {
+    inset-block-start: -33.34375px;
+  }
+}
+
+:global([dir='rtl']) .workspace {
+  translate: 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace,
+  .codeLead,
+  .codeCollection,
+  .codeSchema,
+  .codeTail,
+  .codeRestart,
+  .roadmapPanel > strong,
+  .roadmapGroup {
+    transition: none;
+    opacity: 1;
+  }
+}

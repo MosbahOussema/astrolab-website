@@ -1,0 +1,11 @@
+.field {
+  display: block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  pointer-events: none;
+  color: var(--astro-star);
+  opacity: var(--astro-star-opacity);
+}

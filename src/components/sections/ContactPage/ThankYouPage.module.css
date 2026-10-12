@@ -1,0 +1,218 @@
+.page {
+  align-items: center;
+  background: var(--astro-bg);
+  color: var(--astro-text);
+  display: flex;
+  justify-content: center;
+  min-block-size: 100svh;
+  overflow: hidden;
+  padding-block: 180px 0;
+  padding-inline: 40px;
+  position: relative;
+}
+
+.background {
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+}
+
+.content {
+  animation: contentEnter 2s var(--astro-ease-entrance) 0.3s backwards;
+  align-items: center;
+  background: var(--astro-success-card);
+  backdrop-filter: blur(155.498px);
+  border-radius: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  inline-size: min(901px, 100%);
+  justify-content: flex-start;
+  min-block-size: 386px;
+  padding-block: 32.5px;
+  padding-inline: 24px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.particles {
+  z-index: 1;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  block-size: 1024px;
+  pointer-events: none;
+  animation: particlesEnter 2s var(--astro-ease-entrance) 0.6s backwards;
+}
+@keyframes contentEnter {
+  from {
+    opacity: 0.001;
+    transform: translateY(80px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes particlesEnter {
+  from {
+    opacity: 0.001;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--astro-success-border);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.content h1 {
+  font-family: var(--astro-font-success);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.41px;
+  line-height: 66px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.content > p {
+  color: var(--astro-text);
+  font-family: var(--astro-font-ui);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 23px;
+  margin: 0;
+  max-inline-size: 853px;
+}
+
+.content a {
+  align-items: center;
+  background: var(--astro-text);
+  border-radius: 9999px;
+  color: var(--astro-control-ink);
+  display: flex;
+  font-family: var(--astro-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 8px;
+  inline-size: 190.1875px;
+  justify-content: center;
+  line-height: 24px;
+  min-block-size: 44px;
+  padding-block: 10px;
+  padding-inline: 16px;
+  text-decoration: none;
+}
+
+.content a svg {
+  block-size: 21px;
+  fill: none;
+  inline-size: 21px;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  transition: transform 0.2s ease;
+}
+
+.content a:focus-visible {
+  outline: 2px solid var(--astro-accent);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .content a:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+:dir(rtl) .content a svg {
+  transform: scaleX(-1);
+}
+
+.checkmark {
+  align-items: center;
+  background: var(--astro-success-check);
+  border-radius: 100px;
+  color: var(--astro-ink);
+  display: flex;
+  flex: 0 0 93px;
+  inline-size: 93px;
+  justify-content: center;
+  padding-block: 10px;
+  padding-inline: 10px;
+}
+
+.checkmark svg {
+  block-size: 36px;
+  fill: none;
+  inline-size: 37px;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.25;
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .page {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-block-start: 320px;
+  }
+
+  .content {
+    inline-size: 100%;
+    min-block-size: 369px;
+    padding-block: 24px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .page {
+    align-items: flex-start;
+    padding-block: 146px 0;
+    padding-inline: 20px;
+  }
+
+  .content {
+    inline-size: 350px;
+    margin-block-start: 50px;
+    min-block-size: 412px;
+    padding-block: 24px;
+    padding-inline: 24px;
+  }
+
+  .checkmark {
+    flex-basis: 59px;
+    inline-size: 59px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .content > p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content,
+  .particles {
+    animation: none;
+  }
+
+  .content a svg {
+    transition: none;
+  }
+}

@@ -1,0 +1,172 @@
+.root {
+  position: relative;
+  inline-size: min(307px, 100%);
+  block-size: 210px;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.artworkContainer {
+  position: relative;
+  inset-inline-start: 50%;
+  inline-size: 307px;
+  block-size: 199px;
+  translate: -50%;
+}
+
+.artwork {
+  position: absolute;
+  inset-block: 0 -11px;
+  inset-inline-end: 0;
+  inline-size: 306px;
+  overflow: visible;
+  border-radius: 16px;
+}
+
+.artwork > img {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+  object-fit: fill;
+  border-radius: inherit;
+}
+
+.artwork::after,
+.mike > span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--astro-text-08);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.cursorGroup {
+  position: absolute;
+  inset-inline-start: calc(51.96078431372552% - 113.96565246582031px);
+  inset-block-start: calc(54.285714285714306% - 56.5px);
+  inline-size: 228px;
+  block-size: 113px;
+  overflow: visible;
+}
+
+.carlos,
+.mike {
+  position: absolute;
+  inset-inline-start: var(--design-x);
+  inset-block-start: var(--design-y);
+}
+
+.carlos {
+  inline-size: 81px;
+  block-size: 48px;
+}
+
+.mike {
+  inline-size: 73px;
+  block-size: 48px;
+}
+
+.mike > img {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 17px;
+  block-size: 17px;
+}
+
+.mike > span {
+  position: absolute;
+  inset-block-start: 16px;
+  inset-inline-start: 15px;
+  inline-size: 58px;
+  block-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6.4531970024px 12px 6.4531970024px 12.9063940048px;
+  border-radius: 1.61px 19.36px 19.36px;
+  background: var(--astro-accent);
+  box-shadow: 3.2265985012px 3.2265985012px 8.0664958954px var(--astro-services-design-shadow);
+  color: var(--astro-text);
+  white-space: nowrap;
+  font: 400 13px/24px var(--astro-font-display);
+  letter-spacing: -0.2px;
+}
+
+.mike > span::after {
+  border-width: 1.6132992506px;
+  border-color: var(--astro-services-hub-border);
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .root {
+    inline-size: 195px;
+    block-size: 157px;
+  }
+
+  .artworkContainer {
+    inline-size: 195px;
+    block-size: 126px;
+  }
+
+  .artwork {
+    inset-block-end: -31px;
+    inline-size: 195px;
+    border-radius: 10.17px;
+  }
+
+  .artwork::after {
+    border-width: 0.64px;
+  }
+
+  .cursorGroup {
+    inset-inline-start: calc(51.96078431372552% - 72.44px);
+    inset-block-start: calc(54.285714285714306% - 35.915px);
+    inline-size: 145px;
+    block-size: 72px;
+  }
+
+  .carlos {
+    inline-size: 51px;
+    block-size: 31px;
+  }
+
+  .mike {
+    inline-size: 46px;
+    block-size: 31px;
+  }
+
+  .mike > img {
+    inline-size: 11px;
+    block-size: 11px;
+  }
+
+  .mike > span {
+    inset-block-start: 10px;
+    inset-inline-start: 9px;
+    inline-size: 37px;
+    block-size: 21px;
+    padding: 4.11px 7.63px 4.11px 8.2px;
+    border-radius: 1.02px 12.3px 12.3px;
+    box-shadow: 2.05px 2.05px 8.0664958954px var(--astro-services-design-shadow);
+    font-size: 8px;
+    line-height: 15.2553928796px;
+    letter-spacing: -0.12px;
+  }
+
+  .mike > span::after {
+    border-width: 1.02px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+:global([dir='rtl']) .artworkContainer {
+  translate: 50%;
+}

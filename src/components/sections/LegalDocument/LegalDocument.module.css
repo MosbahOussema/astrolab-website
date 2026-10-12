@@ -1,0 +1,118 @@
+.page {
+  background: var(--astro-bg);
+  color: var(--astro-text);
+  padding-block: 268px 160px;
+}
+
+/* The reference legal shell keeps its outer 20px frame below the footer. */
+.page ~ :global(footer) {
+  margin-block-end: 20px;
+}
+.document {
+  inline-size: min(1100px, calc(100% - 40px));
+  padding-inline: 48px;
+  margin-inline: auto;
+  text-align: start;
+}
+.document header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-block-end: 96px;
+}
+.document h1 {
+  inline-size: min(698px, 100%);
+  margin: 0;
+  font: 400 80px/1 var(--astro-font-legal);
+  letter-spacing: -0.05em;
+}
+.document time {
+  padding: 6px 16px;
+  border-radius: 32px;
+  background: var(--astro-legal-date-surface);
+  color: var(--astro-legal-date-text);
+  font: 400 14px/21px var(--astro-font-legal);
+}
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.intro,
+.body section {
+  display: contents;
+}
+.document h2 {
+  margin: 40px 0 0;
+  font: 600 42px/1.4 var(--astro-font-display);
+  letter-spacing: -0.04em;
+}
+.document p,
+.document li {
+  color: var(--astro-legal-body-text);
+  font: 400 18px/28.8px var(--astro-font-body);
+  letter-spacing: -0.02em;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+.document p {
+  margin: 20px 0 0;
+}
+.intro > :first-child,
+.body > section:first-child > h2 {
+  margin-block-start: 0;
+}
+.document strong {
+  font-weight: 700;
+}
+.document a {
+  color: inherit;
+  text-decoration: none;
+}
+.document a:focus-visible {
+  outline: 2px solid var(--astro-focus);
+  outline-offset: 3px;
+}
+.document ul {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+}
+.document li {
+  position: relative;
+  padding-inline-start: 23.94px;
+}
+.document li::before {
+  content: '•';
+  position: absolute;
+  inset-inline-start: 0;
+}
+@media (min-width: 810px) and (max-width: 1199px) {
+  .document p,
+  .document li {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+@media (max-width: 809px) {
+  .page {
+    padding-block-start: 196px;
+  }
+
+  .document {
+    padding-inline: 12px;
+  }
+
+  .document li {
+    padding-inline-start: 18.62px;
+  }
+
+  .document h1 {
+    font-size: 41px;
+  }
+  .document p,
+  .document li {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+}

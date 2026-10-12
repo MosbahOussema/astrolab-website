@@ -1,0 +1,396 @@
+.page {
+  background: var(--astro-bg, #031111);
+  color: var(--astro-text, #fff);
+  overflow: hidden;
+  padding-block: 195px 160px;
+}
+
+.contentSection,
+.relatedSection {
+  inline-size: min(1312px, calc(100% - 228px));
+  margin-inline: auto;
+}
+
+.hero {
+  inline-size: calc(100% - 40px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.page[data-case='talinty-ai-recruitment-platform'] {
+  padding-block-start: 140px;
+}
+
+.heroHeading {
+  inline-size: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.breadcrumb {
+  align-items: center;
+  color: var(--astro-muted, rgba(255, 255, 255, 0.5));
+  display: flex;
+  font-family: var(--astro-font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  gap: 10px;
+  letter-spacing: -0.02em;
+  inline-size: fit-content;
+  margin: 0;
+  padding: 10px;
+  font-feature-settings:
+    'blwf' on,
+    'cv09' on,
+    'cv03' on,
+    'cv04' on,
+    'cv11' on;
+}
+
+.breadcrumb span {
+  font-size: 16px;
+  color: var(--astro-text);
+}
+
+.breadcrumb a {
+  color: var(--astro-text, #fff);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero h1 {
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1;
+  inline-size: 100%;
+  margin: 0;
+}
+
+.heroImage {
+  aspect-ratio: 1.8 / 1;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImage img {
+  block-size: 646px;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: calc(50% - 322.75px);
+}
+
+.page:is([data-case='talinty-ai-recruitment-platform'], [data-case='rawi-al-kotob-use-case'])
+  .heroImage
+  img {
+  object-position: center;
+}
+
+.contentSection {
+  display: grid;
+  grid-template-columns: clamp(120px, 7.03125vw, 135px) minmax(0, 1fr);
+  gap: clamp(270px, 15.625vw, 300px);
+  padding-block: 175px 0;
+}
+
+.contentSection + .contentSection {
+  border-block-start: 1px solid var(--astro-border, #263534);
+  margin-block-start: 145px;
+}
+
+.sectionLabel {
+  color: var(--astro-accent, #c1976b);
+  font-family: var(--astro-font-ui, Inter), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  margin: 6px 0 0;
+  text-transform: uppercase;
+}
+
+.overviewCopy,
+.sectionIntro,
+.itemCopy {
+  color: var(--astro-muted, rgba(255, 255, 255, 0.65));
+  font-family: var(--astro-font-body, Onest), sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.overviewCopy p,
+.sectionIntro p,
+.itemCopy p {
+  margin: 0;
+}
+
+.overviewCopy p + p,
+.sectionIntro p + p,
+.itemCopy p + p {
+  margin-block-start: 28px;
+}
+
+.paragraphLine {
+  display: block;
+}
+
+.facts {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr 1fr;
+  margin-block-start: 80px;
+}
+
+.fact {
+  border-block-start: 1px solid var(--astro-border, #263534);
+  padding-block-start: 19px;
+}
+
+.fact h2,
+.item h3 {
+  color: var(--astro-text, #fff);
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+  font-weight: 600;
+}
+
+.fact h2 {
+  font-size: 17px;
+  margin: 0 0 13px;
+}
+.mobileFactLabel {
+  display: none;
+}
+.mobileOnly {
+  display: none;
+}
+
+.fact p {
+  color: var(--astro-muted, rgba(255, 255, 255, 0.65));
+  font-family: var(--astro-font-body, Onest), sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+  font-size: clamp(39px, 4vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.sectionIntro {
+  margin-block-start: 37px;
+}
+
+.items {
+  display: grid;
+  gap: 0;
+  margin-block-start: 72px;
+}
+
+.itemReveal {
+  border-block-start: 1px solid var(--astro-border, #263534);
+}
+
+.item {
+  padding-block: 37px;
+}
+
+.item h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 0 0 18px;
+}
+
+.itemImage {
+  margin-block-start: 42px;
+  overflow: hidden;
+}
+
+.itemImage img {
+  block-size: auto;
+  display: block;
+  inline-size: 100%;
+}
+
+.services .items,
+.challenges .items,
+.results .items {
+  grid-template-columns: 1fr 1fr;
+}
+
+.services .itemReveal,
+.challenges .itemReveal,
+.results .itemReveal {
+  padding-inline-end: 29px;
+}
+
+.services .itemReveal:nth-child(even),
+.challenges .itemReveal:nth-child(even),
+.results .itemReveal:nth-child(even) {
+  border-inline-start: 1px solid var(--astro-border, #263534);
+  padding-inline: 29px 0;
+}
+
+.services .itemCopy,
+.challenges .itemCopy,
+.results .itemCopy {
+  font-size: 15px;
+}
+
+.solutions .items,
+.strategy .items {
+  gap: 72px;
+}
+
+.solutions .item,
+.strategy .item {
+  padding-block: 39px 0;
+}
+
+.conclusion .sectionBody {
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+}
+
+.conclusion .sectionIntro {
+  color: var(--astro-text, #fff);
+  font-family: inherit;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.35;
+  margin-block-start: 0;
+}
+
+.relatedSection {
+  border-block-start: 1px solid var(--astro-border, #263534);
+  margin-block-start: 160px;
+  padding-block-start: 106px;
+}
+
+.relatedSection > h2 {
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+  font-size: clamp(42px, 4vw, 56px);
+  font-weight: 600;
+  margin: 0 0 50px;
+}
+
+.relatedGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.relatedCard {
+  color: var(--astro-text, #fff);
+  text-decoration: none;
+}
+
+.relatedImage {
+  aspect-ratio: 1.28 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.relatedImage img {
+  object-fit: cover;
+}
+
+.relatedCard h3 {
+  font-family: var(--astro-font-display, 'Cal Sans'), sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 19px 0 8px;
+}
+
+.relatedCard p {
+  color: var(--astro-muted, rgba(255, 255, 255, 0.55));
+  font-family: var(--astro-font-body, Onest), sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.animatedText {
+  white-space: pre-wrap;
+}
+
+.lineWord {
+  display: inline-block;
+  opacity: 0.001;
+  transform: translateY(10px);
+}
+
+.sectionContents {
+  display: contents;
+}
+
+.sectionEntrance {
+  display: inherit;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  flex-direction: inherit;
+  gap: inherit;
+  inline-size: 100%;
+}
+
+.sectionDetails {
+  grid-column: 2;
+  min-inline-size: 0;
+}
+
+/* The solution heading enters independently from its following media. */
+.page[data-editorial='true'] .contentSection.splitSection {
+  row-gap: 0;
+}
+.splitSection > .sectionEntrance {
+  row-gap: var(--case-header-gap, 0px);
+}
+
+.dividedSection {
+  position: relative;
+}
+.caseDivider {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 1px;
+  block-size: 1px;
+  background: var(--astro-case-divider);
+  pointer-events: none;
+}
+.solutions > .caseDivider {
+  inset-block-start: 43px;
+}
+.page:is([data-case='mazad-al-jomrok-use-case'], [data-case='rawi-al-kotob-use-case'])
+  .solutions
+  > .caseDivider {
+  inset-block-start: 0;
+}
+.page[data-editorial='true'] .contentSection.conclusion {
+  border-color: transparent;
+}
+.conclusion > .caseDivider {
+  inset-block-start: -1px;
+}
+.conclusion > .caseDividerEnd {
+  inset-block-start: auto;
+  inset-block-end: -1px;
+}
+.mazadDividerAfter {
+  inset-block-start: calc(100% + 80px);
+}
+.mazadDividerAfterLast {
+  inset-block-start: calc(100% + 101px);
+}
+
+/* Shared measured editorial primitives; route-specific compositions follow. */
